@@ -28,5 +28,10 @@ class ViewController: UIViewController {
         textField.text = "Hi Holly"
     }
     
+    @IBOutlet weak var hollyButton: UIButton!
+    @IBAction func textOut(_ sender: Any) {
+        textField.text = "bob ger sux"
+    }
+    
 }
 
