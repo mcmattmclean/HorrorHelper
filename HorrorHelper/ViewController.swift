@@ -20,17 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var descriptionField: UILabel!
     
     @IBOutlet weak var setTextButton: UIButton!
     
     @IBAction func updateText(_ sender: Any) {
-        textField.text = "Hi Holly"
+        descriptionField.text = "Hi Holly"
     }
     
     @IBOutlet weak var hollyButton: UIButton!
     @IBAction func textOut(_ sender: Any) {
-        textField.text = "bob ger sux"
+        descriptionField.text = "bob ger sux"
     }
     
 }
