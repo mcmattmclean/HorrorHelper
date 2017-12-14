@@ -36,10 +36,26 @@
                                     <action selector="updateText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3c2-lc-Fh1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-Iw-7Mo">
-                                <rect key="frame" x="199" y="542" width="46" height="30"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yMD-m7-oum">
+                                <rect key="frame" x="273" y="618" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="slidey:" destination="BYZ-38-t0r" eventType="valueChanged" id="rc3-m6-0ZP"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wtv-IL-V9r">
+                                <rect key="frame" x="285" y="329" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="steppy:" destination="BYZ-38-t0r" eventType="valueChanged" id="CFt-UI-hCR"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-Iw-7Mo">
+                                <rect key="frame" x="137" y="478" width="108" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="holly"/>
                                 <connections>
                                     <action selector="textOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odi-Pd-w1o"/>
                                 </connections>
@@ -49,13 +65,15 @@
                     </view>
                     <connections>
                         <outlet property="hollyButton" destination="ZfG-Iw-7Mo" id="mk2-30-Bv0"/>
+                        <outlet property="mySlider" destination="yMD-m7-oum" id="5kp-ya-DP2"/>
+                        <outlet property="myStepper" destination="wtv-IL-V9r" id="Omu-cc-oBa"/>
                         <outlet property="setTextButton" destination="K2S-ac-unM" id="xBS-lO-7jI"/>
                         <outlet property="textField" destination="uNM-Pe-mkv" id="odM-hn-iwZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.828696925329425" y="122.46093749999999"/>
+            <point key="canvasLocation" x="-99.21875" y="122.46093749999999"/>
         </scene>
     </scenes>
 </document>

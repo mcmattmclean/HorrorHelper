@@ -33,5 +33,17 @@ class ViewController: UIViewController {
         textField.text = "bob ger sux"
     }
     
+    @IBOutlet weak var mySlider: UISlider!
+    @IBAction func slidey(_ sender: Any) {
+        textField.text = String(self.mySlider.value)
+    }
+    
+    
+    @IBOutlet weak var myStepper: UIStepper!
+    @IBAction func steppy(_ sender: Any) {
+        
+    }
+    
+    
 }
 
