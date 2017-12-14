@@ -37,20 +37,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterOutskirtLabel: UILabel!
     @IBOutlet weak var terrorTrackLabel: UILabel!
     
+    
+    
     @IBAction func gateOpenChanged(_ sender: UIStepper) {
-        gateOpenLabel.text = String(sender.value)
+        gateOpenLabel.text = String(Int(sender.value))
     }
     @IBAction func gateSealedChanged(_ sender: UIStepper) {
-        gateSealedLabel.text = String(sender.value)
+        gateSealedLabel.text = String(Int(sender.value))
     }
     @IBAction func monsterTownChanged(_ sender: UIStepper) {
-        monsterTownLabel.text = String(sender.value)
+        monsterTownLabel.text = String(Int(sender.value))
     }
     @IBAction func monsterOutskirtChanged(_ sender: UIStepper) {
-        monsterOutskirtLabel.text = String(sender.value)
+        monsterOutskirtLabel.text = String(Int(sender.value))
     }
     @IBAction func terrorTrackChanged(_ sender: UIStepper) {
-        terrorTrackLabel.text = String(sender.value)
+        terrorTrackLabel.text = String(Int(sender.value))
     }
 }
 
