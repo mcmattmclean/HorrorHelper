@@ -25,12 +25,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var setTextButton: UIButton!
     
     @IBAction func updateText(_ sender: Any) {
-        descriptionField.text = "lorem fdjsk ghfjdksl ghfjdksl ghfjdksl gfhjdkslg fhjdkslghfjdksl gfhjdkslg fhjdkslgfhjkdlsghfkdlghjkdalrvaebv jreklvbrksl vmnrslkv dnrsklv rjdsklvndrsjklv jrslnjkrl"
+        descriptionField.text = "1. Refresh exhausted cards.\n\n2. Perform upkeep actions:\n\tBless\n\tCurse\n\tBank Loan\n\tRetainer\n\n3. Adjust skills within character's focus stat."
     }
     
     @IBOutlet weak var hollyButton: UIButton!
     @IBAction func textOut(_ sender: Any) {
         descriptionField.text = "bob ger sux"
+    }
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBOutlet weak var stepVal: UILabel!
+    
+    @IBAction func changeStepper(_ sender: Any) {
+        stepVal.text = String(stepper.value)
+        if(stepper.value > 6){
+//            descriptionField.text = "You've won!"
+//            descriptionField.textColor = UIColor.red
+        }
     }
     
 }
