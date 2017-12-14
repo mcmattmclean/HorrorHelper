@@ -77,12 +77,12 @@
 		0346E4871FE1BCC900C8CE82 /* HorrorHelper */ = {
 			isa = PBXGroup;
 			children = (
+				0346E4941FE1BCC900C8CE82 /* Info.plist */,
 				0346E4881FE1BCC900C8CE82 /* AppDelegate.swift */,
-				0346E48A1FE1BCC900C8CE82 /* ViewController.swift */,
-				0346E48C1FE1BCC900C8CE82 /* Main.storyboard */,
 				0346E48F1FE1BCC900C8CE82 /* Assets.xcassets */,
 				0346E4911FE1BCC900C8CE82 /* LaunchScreen.storyboard */,
-				0346E4941FE1BCC900C8CE82 /* Info.plist */,
+				0346E48A1FE1BCC900C8CE82 /* ViewController.swift */,
+				0346E48C1FE1BCC900C8CE82 /* Main.storyboard */,
 			);
 			path = HorrorHelper;
 			sourceTree = "<group>";
@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					0346E4841FE1BCC900C8CE82 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LXP48E9H7N;
 						ProvisioningStyle = Automatic;
 					};
 					0346E4981FE1BCCA00C8CE82 = {
@@ -339,11 +340,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LXP48E9H7N;
 				INFOPLIST_FILE = HorrorHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = McLeanSoft.HorrorHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +354,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LXP48E9H7N;
 				INFOPLIST_FILE = HorrorHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = McLeanSoft.HorrorHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -406,6 +411,7 @@
 				0346E4A41FE1BCCA00C8CE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0346E4A51FE1BCCA00C8CE82 /* Build configuration list for PBXNativeTarget "HorrorHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +420,7 @@
 				0346E4A71FE1BCCA00C8CE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
