@@ -24,35 +24,38 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionField: UILabel!
     @IBOutlet weak var nextPhaseButton: UIButton!
     @IBOutlet weak var previousPhaseButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     
     @IBOutlet weak var gateOpenStepper: UIStepper!
     @IBOutlet weak var gateSealedStepper: UIStepper!
     @IBOutlet weak var monsterTownStepper: UIStepper!
     @IBOutlet weak var monsterOutskirtStepper: UIStepper!
-    @IBOutlet weak var terrorTrackStepper: UIStepper!
+    @IBOutlet weak var numberPlayersStepper: UIStepper!
     
     @IBOutlet weak var gateOpenLabel: UILabel!
     @IBOutlet weak var gateSealedLabel: UILabel!
     @IBOutlet weak var monsterTownLabel: UILabel!
     @IBOutlet weak var monsterOutskirtLabel: UILabel!
-    @IBOutlet weak var terrorTrackLabel: UILabel!
+    @IBOutlet weak var numberPlayersLabel: UILabel!
     
-    
+    private var game: GameState = GameState()
     
     @IBAction func gateOpenChanged(_ sender: UIStepper) {
-        gateOpenLabel.text = String(Int(sender.value))
+//        gateOpenLabel.text = String(Int(sender.value))
+        game.changeGatesOpen(newNumGates: Int(sender.value))
     }
     @IBAction func gateSealedChanged(_ sender: UIStepper) {
-        gateSealedLabel.text = String(Int(sender.value))
+//        gateSealedLabel.text = String(Int(sender.value))
     }
     @IBAction func monsterTownChanged(_ sender: UIStepper) {
-        monsterTownLabel.text = String(Int(sender.value))
+//        monsterTownLabel.text = String(Int(sender.value))
     }
     @IBAction func monsterOutskirtChanged(_ sender: UIStepper) {
-        monsterOutskirtLabel.text = String(Int(sender.value))
+//        monsterOutskirtLabel.text = String(Int(sender.value))
     }
-    @IBAction func terrorTrackChanged(_ sender: UIStepper) {
-        terrorTrackLabel.text = String(Int(sender.value))
+    @IBAction func numberPlayersChanged(_ sender: UIStepper) {
+//        numberPlayersLabel.text = String(Int(sender.value))
+        game.setGameConstraints(numPlayers: Int(sender.value))
     }
 }
 
