@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        updateDescription()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,15 @@ class ViewController: UIViewController {
     private func updateDescription(){
         descriptionField.text = game.currentMessage
         phaseHeaderLabel.text = game.phaseHeader
+        if game.currentPhase == .alert {
+            phaseHeaderLabel.textColor = UIColor.red
+        }
+        else if game.currentPhase == .start {
+            phaseHeaderLabel.textColor = UIColor.green
+        }
+        else {
+            phaseHeaderLabel.textColor = UIColor.cyan
+        }
     }
     
     @IBAction func resetGame(_ sender: UIButton) {

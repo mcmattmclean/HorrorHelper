@@ -12,7 +12,7 @@ class GameState {
     var players: Int
     var phaseHeader: String?
     var currentMessage: String?
-    private var currentPhase: Phase
+    var currentPhase: Phase
     private var oldPhase: Phase
     
     var monstersTown: Int
@@ -26,7 +26,7 @@ class GameState {
     private var maximumMonstersTown: Int
     private var maximumGatesOpen: Int
     
-    private enum Phase {
+    enum Phase {
         case start
         case alert
         case upkeep
