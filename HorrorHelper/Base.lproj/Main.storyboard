@@ -65,6 +65,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Reset"/>
+                                                        <connections>
+                                                            <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYc-Nx-w0m"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-Iw-7Mo">
                                                         <rect key="frame" x="121.5" y="13" width="116" height="36"/>
@@ -73,6 +76,9 @@
                                                         <state key="normal" title="Prev">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="revertPhase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJs-zA-3iF"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-ac-unM">
                                                         <rect key="frame" x="243.5" y="13" width="115.5" height="36"/>
@@ -81,6 +87,9 @@
                                                         <state key="normal" title="Next">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="nextPhase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ld-lG-RKr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -262,30 +271,22 @@
                                                                 <rect key="frame" x="119.5" y="0.0" width="120" height="104"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-41-kR9">
-                                                                        <rect key="frame" x="11.5" y="0.0" width="97.5" height="52"/>
+                                                                        <rect key="frame" x="11.5" y="0.0" width="97.5" height="104"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outskirts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCN-G1-9qD">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="79" height="52"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="79" height="104"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-y8-MRh">
-                                                                                <rect key="frame" x="87" y="0.0" width="10.5" height="52"/>
+                                                                                <rect key="frame" x="87" y="0.0" width="10.5" height="104"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="x9k-Qw-A2L">
-                                                                        <rect key="frame" x="13" y="52" width="94" height="29"/>
-                                                                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <connections>
-                                                                            <action selector="monsterOutskirtChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lrr-MV-FFv"/>
-                                                                        </connections>
-                                                                    </stepper>
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2i-tr-eGE">
@@ -316,7 +317,6 @@
                         <outlet property="gateSealedLabel" destination="f1L-MZ-pLT" id="pIv-O3-88R"/>
                         <outlet property="gateSealedStepper" destination="lXt-kv-6mj" id="i8l-sI-trY"/>
                         <outlet property="monsterOutskirtLabel" destination="e8A-y8-MRh" id="Z0B-BF-eZ6"/>
-                        <outlet property="monsterOutskirtStepper" destination="x9k-Qw-A2L" id="KSZ-oP-qD3"/>
                         <outlet property="monsterTownLabel" destination="zcb-Jy-fYE" id="tGu-lP-RTd"/>
                         <outlet property="monsterTownStepper" destination="SJK-Lc-kB6" id="a3m-UV-msC"/>
                         <outlet property="nextPhaseButton" destination="K2S-ac-unM" id="HKy-jg-4ld"/>
