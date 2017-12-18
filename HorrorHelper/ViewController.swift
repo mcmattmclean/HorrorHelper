@@ -38,34 +38,47 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterOutskirtLabel: UILabel!
     @IBOutlet weak var numberPlayersLabel: UILabel!
     
-    private var game: GameState = GameState()
+    private var game: GameState = GameState() {
+        didSet {
+            updateDescription()
+        }
+    }
+    
+    private var gatesOpenDisplayValue: Int {
+        get {
+            return Int(gateOpenLabel.text!)!
+        }
+        set {
+            gateOpenLabel.text = String(newValue)
+        }
+    }
     
     private func updateDescription(){
-        descriptionField.text = game.currentMessage
-        phaseHeaderLabel.text = game.phaseHeader
+        descriptionField?.text = game.currentMessage
+        phaseHeaderLabel?.text = game.phaseHeader
         if game.currentPhase == .alert {
-            phaseHeaderLabel.textColor = UIColor.red
+            phaseHeaderLabel?.textColor = UIColor.red
         }
         else if game.currentPhase == .start {
-            phaseHeaderLabel.textColor = UIColor.green
+            phaseHeaderLabel?.textColor = UIColor.green
         }
         else {
-            phaseHeaderLabel.textColor = UIColor.cyan
+            phaseHeaderLabel?.textColor = UIColor.cyan
         }
     }
     
     @IBAction func resetGame(_ sender: UIButton) {
         game.reset()
         updateDescription()
-        gateSealedLabel.text = "0"
-        gateSealedStepper.value = 0
-        gateOpenLabel.text = "0"
-        gateOpenStepper.value = 0
-        monsterTownLabel.text = "0"
-        monsterTownStepper.value = 0
-        monsterOutskirtLabel.text = "0"
-        numberPlayersLabel.text = "0"
-        numberPlayersStepper.value = 0
+        gateSealedLabel?.text = "0"
+        gateSealedStepper?.value = 0
+        gateOpenLabel?.text = "0"
+        gateOpenStepper?.value = 0
+        monsterTownLabel?.text = "0"
+        monsterTownStepper?.value = 0
+        monsterOutskirtLabel?.text = "0"
+        numberPlayersLabel?.text = "0"
+        numberPlayersStepper?.value = 0
     }
     
     @IBAction func nextPhase(_ sender: UIButton) {
@@ -80,28 +93,28 @@ class ViewController: UIViewController {
     
     @IBAction func gateOpenChanged(_ sender: UIStepper) {
         game.changeGatesOpen(newNumGates: Int(sender.value))
-        gateOpenLabel.text = String(game.gatesOpen)
-        gateOpenStepper.value = Double(game.gatesOpen)
+        gatesOpenDisplayValue = game.gatesOpen
+        gateOpenStepper?.value = Double(game.gatesOpen)
         updateDescription()
     }
     @IBAction func gateSealedChanged(_ sender: UIStepper) {
         game.changeGatesSealed(newNumGates: Int(sender.value))
-        gateSealedLabel.text = String(game.gatesSealed)
-        gateSealedStepper.value = Double(game.gatesSealed)
+        gateSealedLabel?.text = String(game.gatesSealed)
+        gateSealedStepper?.value = Double(game.gatesSealed)
         updateDescription()
     }
     @IBAction func monsterTownChanged(_ sender: UIStepper) {
         game.changeMonstersTown(newNumMonsters: Int(sender.value))
-        monsterTownLabel.text = String(game.monstersTown)
-        monsterOutskirtLabel.text = String(game.monstersOutskirts)
-        monsterTownStepper.value = Double(game.monstersTown)
+        monsterTownLabel?.text = String(game.monstersTown)
+        monsterOutskirtLabel?.text = String(game.monstersOutskirts)
+        monsterTownStepper?.value = Double(game.monstersTown)
         updateDescription()
     }
     
     @IBAction func numberPlayersChanged(_ sender: UIStepper) {
 //        numberPlayersLabel.text = String(Int(sender.value))
         game.setGameConstraints(numPlayers: Int(sender.value))
-        numberPlayersLabel.text = String(game.players)
+        numberPlayersLabel?.text = String(game.players)
     }
 }
 

@@ -20,6 +20,7 @@ class GameState {
     var gatesOpen: Int
     var gatesSealed: Int
     
+    // Game rules for sealed gate victory doesn't change with number of players (always 6)
     let maximumGatesSealed: Int = 6
     
     private var maximumMonstersOutskirts: Int
@@ -118,9 +119,7 @@ class GameState {
             currentPhase = .alert
             updatePhaseString()
         }
-        else {
-            gatesOpen = newNumGates
-        }
+        gatesOpen = newNumGates
     }
     
     public func changeGatesSealed(newNumGates: Int) {
@@ -130,9 +129,7 @@ class GameState {
             phaseHeader = "Game Over"
             updatePhaseString()
         }
-        else {
-            gatesSealed = newNumGates
-        }
+        gatesSealed = newNumGates
     }
     
     public func changeMonstersTown(newNumMonsters: Int) {
@@ -161,27 +158,22 @@ class GameState {
         switch currentPhase {
         case .start:
             currentPhase = .upkeep
-            updatePhaseString()
         case .upkeep:
             currentPhase = .movement
-            updatePhaseString()
         case .movement:
             currentPhase = .arkhamEncounters
-            updatePhaseString()
         case .arkhamEncounters:
             currentPhase = .otherworldEncounters
-            updatePhaseString()
         case .otherworldEncounters:
             currentPhase = .mythos
-            updatePhaseString()
         case .mythos:
             currentPhase = .upkeep
-            updatePhaseString()
         case .alert:
             currentPhase = oldPhase //Get phase from before alert and reset to that phase
             goBackPhase()
             advancePhase()
         }
+        updatePhaseString()
         oldPhase = currentPhase
     }
     
@@ -191,24 +183,20 @@ class GameState {
             break
         case .upkeep:
             currentPhase = .mythos
-            updatePhaseString()
         case .movement:
             currentPhase = .upkeep
-            updatePhaseString()
         case .arkhamEncounters:
             currentPhase = .movement
-            updatePhaseString()
         case .otherworldEncounters:
             currentPhase = .arkhamEncounters
-            updatePhaseString()
         case .mythos:
             currentPhase = .otherworldEncounters
-            updatePhaseString()
         default:
             currentPhase = oldPhase
             advancePhase()
             goBackPhase()
         }
+        updatePhaseString()
         oldPhase = currentPhase
     }
 }
