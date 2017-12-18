@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0346E4891FE1BCC900C8CE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0346E4881FE1BCC900C8CE82 /* AppDelegate.swift */; };
-		0346E48B1FE1BCC900C8CE82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0346E48A1FE1BCC900C8CE82 /* ViewController.swift */; };
+		0346E48B1FE1BCC900C8CE82 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0346E48A1FE1BCC900C8CE82 /* TrackerViewController.swift */; };
 		0346E48E1FE1BCC900C8CE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0346E48C1FE1BCC900C8CE82 /* Main.storyboard */; };
 		0346E4901FE1BCC900C8CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0346E48F1FE1BCC900C8CE82 /* Assets.xcassets */; };
 		0346E4931FE1BCC900C8CE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0346E4911FE1BCC900C8CE82 /* LaunchScreen.storyboard */; };
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		0346E4851FE1BCC900C8CE82 /* HorrorHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorrorHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0346E4881FE1BCC900C8CE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0346E48A1FE1BCC900C8CE82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0346E48A1FE1BCC900C8CE82 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		0346E48D1FE1BCC900C8CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0346E48F1FE1BCC900C8CE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0346E4921FE1BCC900C8CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 				0346E4881FE1BCC900C8CE82 /* AppDelegate.swift */,
 				0346E48F1FE1BCC900C8CE82 /* Assets.xcassets */,
 				0346E4911FE1BCC900C8CE82 /* LaunchScreen.storyboard */,
-				0346E48A1FE1BCC900C8CE82 /* ViewController.swift */,
+				0346E48A1FE1BCC900C8CE82 /* TrackerViewController.swift */,
 				038F997B1FE31F8500303C48 /* GameState.swift */,
 				0346E48C1FE1BCC900C8CE82 /* Main.storyboard */,
 			);
@@ -206,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				038F997C1FE31F8500303C48 /* GameState.swift in Sources */,
-				0346E48B1FE1BCC900C8CE82 /* ViewController.swift in Sources */,
+				0346E48B1FE1BCC900C8CE82 /* TrackerViewController.swift in Sources */,
 				0346E4891FE1BCC900C8CE82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
