@@ -23,9 +23,32 @@ class GameState {
     // Game rules for sealed gate victory doesn't change with number of players (always 6)
     let maximumGatesSealed: Int = 6
     
-    private var maximumMonstersOutskirts: Int
-    private var maximumMonstersTown: Int
-    private var maximumGatesOpen: Int
+    private var maximumMonstersOutskirts: Int {
+        get {
+            return 8 - players
+        }
+    }
+    private var maximumMonstersTown: Int {
+        get {
+            return players + 3
+        }
+    }
+    private var maximumGatesOpen: Int {
+        get {
+            if players < 3 {
+                return 8
+            }
+            else if players < 5 {
+                return 7
+            }
+            else if players < 7 {
+                return 6
+            }
+            else {
+                return 5
+            }
+        }
+    }
     
     enum Phase {
         case start
@@ -72,9 +95,6 @@ class GameState {
         monstersOutskirts = 0
         gatesOpen = 0
         gatesSealed = 0
-        maximumMonstersOutskirts = 100
-        maximumMonstersTown = 100
-        maximumGatesOpen = 100
         updatePhaseString()
     }
     
@@ -88,28 +108,7 @@ class GameState {
         monstersOutskirts = 0
         gatesOpen = 0
         gatesSealed = 0
-        maximumMonstersOutskirts = 100
-        maximumMonstersTown = 100
-        maximumGatesOpen = 100
         updatePhaseString()
-    }
-    
-    public func setGameConstraints(numPlayers: Int) {
-        players = numPlayers
-        if numPlayers < 3 {
-            maximumGatesOpen = 8
-        }
-        else if numPlayers < 5 {
-            maximumGatesOpen = 7
-        }
-        else if numPlayers < 7 {
-            maximumGatesOpen = 6
-        }
-        else {
-            maximumGatesOpen = 5
-        }
-        maximumMonstersOutskirts = 8 - numPlayers
-        maximumMonstersTown = numPlayers + 3
     }
     
     public func changeGatesOpen(newNumGates: Int) {

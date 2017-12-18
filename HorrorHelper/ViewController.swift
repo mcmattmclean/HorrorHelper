@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     
     @IBAction func numberPlayersChanged(_ sender: UIStepper) {
 //        numberPlayersLabel.text = String(Int(sender.value))
-        game.setGameConstraints(numPlayers: Int(sender.value))
+        game.players = Int(sender.value)
         numberPlayersLabel?.text = String(game.players)
     }
 }
