@@ -21,6 +21,8 @@ class TrackerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet var rightSwipe: UISwipeGestureRecognizer!
+    @IBOutlet var leftSwipe: UISwipeGestureRecognizer!
     @IBOutlet weak var phaseHeaderLabel: UILabel!
     @IBOutlet weak var descriptionField: UILabel!
     @IBOutlet weak var nextPhaseButton: UIButton!
@@ -44,6 +46,14 @@ class TrackerViewController: UIViewController {
         }
     }
     
+    @IBAction func handleLeftSwipe(_ sender: Any) {
+        nextPhase(sender)
+    }
+    
+    @IBAction func handleRightSwipe(_ sender: Any) {
+        revertPhase(sender)
+    }
+    
     private var gatesOpenDisplayValue: Int {
         get {
             return Int(gateOpenLabel.text!)!
@@ -60,10 +70,10 @@ class TrackerViewController: UIViewController {
             phaseHeaderLabel?.textColor = UIColor.red
         }
         else if game.currentPhase == .start {
-            phaseHeaderLabel?.textColor = UIColor.green
+            phaseHeaderLabel?.textColor = UIColor.purple
         }
         else {
-            phaseHeaderLabel?.textColor = UIColor.cyan
+            phaseHeaderLabel?.textColor = UIColor.blue
         }
     }
     
@@ -81,12 +91,12 @@ class TrackerViewController: UIViewController {
         numberPlayersStepper?.value = 0
     }
     
-    @IBAction func nextPhase(_ sender: UIButton) {
+    @IBAction func nextPhase(_ sender: Any) {
         game.advancePhase()
         updateDescription()
     }
     
-    @IBAction func revertPhase(_ sender: UIButton) {
+    @IBAction func revertPhase(_ sender: Any) {
         game.goBackPhase()
         updateDescription()
     }

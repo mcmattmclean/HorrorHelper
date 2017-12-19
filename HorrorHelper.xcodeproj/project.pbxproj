@@ -14,6 +14,7 @@
 		0346E4931FE1BCC900C8CE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0346E4911FE1BCC900C8CE82 /* LaunchScreen.storyboard */; };
 		0346E49E1FE1BCCA00C8CE82 /* HorrorHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0346E49D1FE1BCCA00C8CE82 /* HorrorHelperTests.swift */; };
 		038F997C1FE31F8500303C48 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F997B1FE31F8500303C48 /* GameState.swift */; };
+		03ADDC4D1FE8C8A300F78170 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ADDC4C1FE8C8A300F78170 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0346E49D1FE1BCCA00C8CE82 /* HorrorHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorrorHelperTests.swift; sourceTree = "<group>"; };
 		0346E49F1FE1BCCA00C8CE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		038F997B1FE31F8500303C48 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		03ADDC4C1FE8C8A300F78170 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		0346E4871FE1BCC900C8CE82 /* HorrorHelper */ = {
 			isa = PBXGroup;
 			children = (
+				03ADDC4C1FE8C8A300F78170 /* SettingTableViewController.swift */,
 				0346E4941FE1BCC900C8CE82 /* Info.plist */,
 				0346E4881FE1BCC900C8CE82 /* AppDelegate.swift */,
 				0346E48F1FE1BCC900C8CE82 /* Assets.xcassets */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ADDC4D1FE8C8A300F78170 /* SettingTableViewController.swift in Sources */,
 				038F997C1FE31F8500303C48 /* GameState.swift in Sources */,
 				0346E48B1FE1BCC900C8CE82 /* TrackerViewController.swift in Sources */,
 				0346E4891FE1BCC900C8CE82 /* AppDelegate.swift in Sources */,
